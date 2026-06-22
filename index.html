@@ -4,6 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Christophar Antony — Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="icons/dark_favicon_io/favicon.ico"          media="(prefers-color-scheme: dark)">
+  <link rel="icon" sizes="16x16"      type="image/png" href="icons/dark_favicon_io/favicon-16x16.png"   media="(prefers-color-scheme: dark)">
+  <link rel="icon" sizes="32x32"      type="image/png" href="icons/dark_favicon_io/favicon-32x32.png"   media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon"        href="icons/dark_favicon_io/apple-touch-icon.png"                 media="(prefers-color-scheme: dark)">
+  <link rel="manifest"                href="icons/dark_favicon_io/site.webmanifest"                     media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/x-icon" href="icons/light_favicon_io/favicon.ico"         media="(prefers-color-scheme: light)">
+  <link rel="icon" sizes="16x16"       type="image/png" href="icons/light_favicon_io/favicon-16x16.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" sizes="32x32"       type="image/png" href="icons/light_favicon_io/favicon-32x32.png" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-icon"         href="icons/light_favicon_io/apple-touch-icon.png"               media="(prefers-color-scheme: light)">
+  <link rel="manifest"                 href="icons/light_favicon_io/site.webmanifest"                   media="(prefers-color-scheme: light)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
@@ -20,7 +30,10 @@
   <!-- ============ NAV ============ -->
   <nav style="position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); background:var(--nav-bg); border-bottom:1px solid var(--line2);">
     <div class="nav-inner" style="max-width:1180px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between;">
-      <a href="#top" style="font-family:'Geist Mono',monospace; font-size:15px; font-weight:600; color:var(--fg);">ca<span style="color:var(--accent);">.</span></a>
+      <a href="#top" style="display:flex; align-items:center;">
+        <img id="logo-dark"  src="icons/dark-ca-logo.png"  alt="Christophar Antony" class="nav-logo nav-logo--dark">
+        <img id="logo-light" src="icons/light-ca-logo.png" alt="Christophar Antony" class="nav-logo nav-logo--light">
+      </a>
       <div style="display:flex; gap:30px; align-items:center;">
         <div style="display:flex; gap:28px; align-items:center; font-family:'Geist Mono',monospace; font-size:13px;" class="nav-desktop">
           <a href="#about" class="navlink" data-nav="about">about</a>

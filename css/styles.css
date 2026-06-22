@@ -642,3 +642,12 @@
   .mobile-nav { gap: 32px; }
   .mobile-nav .navlink { font-size: 24px; }
 }
+
+/* ── NAV LOGO ── */
+.nav-logo {
+  height: 32px;
+  width: auto;
+  display: none;
+}
+[data-theme="dark"]  .nav-logo--dark  { display: block; }
+[data-theme="light"] .nav-logo--light { display: block; }
