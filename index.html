@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christophar Antony — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js"></script>
+  <script src="js/nav.js"></script>
+</head>
+<body>
+<x-dc>
+
+
+
+<div id="cantony-root" data-theme="dark" style="background:var(--bg); color:var(--fg); font-family:'Geist',sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); background:var(--nav-bg); border-bottom:1px solid var(--line2);">
+    <div class="nav-inner" style="max-width:1180px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="#top" style="font-family:'Geist Mono',monospace; font-size:15px; font-weight:600; color:var(--fg);">ca<span style="color:var(--accent);">.</span></a>
+      <div style="display:flex; gap:30px; align-items:center;">
+        <div style="display:flex; gap:28px; align-items:center; font-family:'Geist Mono',monospace; font-size:13px;" class="nav-desktop">
+          <a href="#about" class="navlink" data-nav="about">about</a>
+          <a href="#work" class="navlink" data-nav="work">work</a>
+          <a href="#experience" class="navlink" data-nav="experience">experience</a>
+          <a href="#education" class="navlink" data-nav="education">education</a>
+          <a href="#contact" class="navlink" data-nav="contact">contact</a>
+        </div>
+        <button id="theme-btn" onclick="{{ toggleTheme }}" aria-label="Toggle theme" class="icon-btn" style="width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:transparent; color:var(--fg-dim); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:15px;">☾</button>
+        <button id="nav-ham-btn" aria-label="Toggle navigation" class="nav-ham icon-btn" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav" role="navigation">
+    <a href="#about"      class="navlink" data-nav="about"     >about</a>
+    <a href="#work"       class="navlink" data-nav="work"      >work</a>
+    <a href="#experience" class="navlink" data-nav="experience">experience</a>
+    <a href="#education"  class="navlink" data-nav="education" >education</a>
+    <a href="#contact"    class="navlink" data-nav="contact"   >contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header id="top" class="hero-pad" style="position:relative; overflow:hidden; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:120px 40px 60px;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(var(--dot) 1px, transparent 1px), radial-gradient(var(--dot2) 1px, transparent 1px); background-size:30px 30px,30px 30px; background-position:0 0,15px 15px; animation:gridDrift 9s linear infinite; -webkit-mask-image:radial-gradient(ellipse 85% 70% at 35% 45%, #000 0%, transparent 78%); mask-image:radial-gradient(ellipse 85% 70% at 35% 45%, #000 0%, transparent 78%);"></div>
+    <div style="position:absolute; top:42%; left:38%; width:620px; height:620px; background:radial-gradient(circle, var(--accent-soft), transparent 62%); animation:glowPulse 8s ease-in-out infinite; pointer-events:none;"></div>
+
+    <div style="position:relative; z-index:2; max-width:1180px; margin:0 auto; width:100%;">
+      <div style="display:inline-flex; align-items:center; gap:9px; font-family:'Geist Mono',monospace; font-size:12px; color:var(--fg-dim); border:1px solid var(--line); border-radius:100px; padding:7px 15px; margin-bottom:38px;"><span style="width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 9px var(--accent);"></span> Available for work</div>
+      <h1 style="font-size:clamp(48px,11vw,128px); line-height:.9; font-weight:800; margin:0; letter-spacing:-.045em;">CHRISTOPHAR<br><span style="color:var(--accent);">ANTONY</span></h1>
+      <p style="font-family:'Geist Mono',monospace; font-size:clamp(14px,2.4vw,19px); color:var(--fg-dim); margin:30px 0 0; letter-spacing:-.01em; max-width:640px;">Full-Stack Engineer building production platforms end-to-end.</p>
+
+      <div style="display:flex; flex-wrap:wrap; margin-top:52px; border-top:1px solid var(--line);">
+        <div style="flex:1 1 200px; padding:22px 26px 22px 0; border-right:1px solid var(--line);">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:var(--fg-mute); letter-spacing:.09em; margin-bottom:9px;">ROLE</div>
+          <div style="font-size:16px;">Full-Stack Engineer</div>
+        </div>
+        <div style="flex:1 1 200px; padding:22px 26px; border-right:1px solid var(--line);">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:var(--fg-mute); letter-spacing:.09em; margin-bottom:9px;">STACK</div>
+          <div style="font-size:16px;">React · Next · Node · TS</div>
+        </div>
+        <div style="flex:1 1 200px; padding:22px 26px; border-right:1px solid var(--line);">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:var(--fg-mute); letter-spacing:.09em; margin-bottom:9px;">BASED IN</div>
+          <div style="font-size:16px;">Kochi, Kerala</div>
+        </div>
+        <div style="flex:1 1 200px; padding:22px 0 22px 26px;">
+          <div style="font-family:'Geist Mono',monospace; font-size:11px; color:var(--fg-mute); letter-spacing:.09em; margin-bottom:9px;">EXPERIENCE</div>
+          <div style="font-size:16px;">3+ years, end-to-end</div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:26px; margin-top:44px; align-items:center;">
+        <a href="#work" class="btn-fill" style="background:var(--accent); color:#0a0a0c; font-weight:600; font-size:15px; padding:14px 28px; border-radius:9px;">View Work →</a>
+        <a href="https://github.com/christopharantony" target="_blank" rel="noopener" class="lnk-slide" style="font-family:'Geist Mono',monospace; font-size:14px; color:var(--fg-dim);">GitHub ↗</a>
+        <a href="mailto:christopharantony@gmail.com" class="lnk-slide" style="font-family:'Geist Mono',monospace; font-size:14px; color:var(--fg-dim);">Email ↗</a>
+        <button onclick="{{ downloadResume }}" class="lnk-slide" style="font-family:'Geist Mono',monospace; font-size:14px; color:var(--fg-dim); background:none; border:none; cursor:pointer; padding:0;">Résumé ↓</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="sec-wrap" style="scroll-margin-top:90px; max-width:1180px; margin:0 auto; padding:110px 40px; border-top:1px solid var(--line2);">
+    <div class="reveal two-col" style="display:grid; grid-template-columns:0.9fr 1.4fr; gap:72px;" data-cols="">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:18px;">01 / ABOUT</div>
+        <h2 style="font-size:clamp(30px,4vw,46px); font-weight:700; line-height:1.08; letter-spacing:-.03em; margin:0;">Self-taught,<br>high-ownership,<br>ships end-to-end.</h2>
+      </div>
+      <div>
+        <p style="font-size:20px; line-height:1.65; color:var(--fg-dim); margin:0 0 18px; max-width:620px;">I'm a full-stack engineer with <span style="color:var(--fg);">3+ years</span> building production platforms across HR SaaS, fintech, EdTech, and AI domains.</p>
+        <p style="font-size:20px; line-height:1.65; color:var(--fg-dim); margin:0 0 46px; max-width:620px;">I take features from <span style="color:var(--fg);">database schema to polished UI</span> — owning the design decisions, the data model, and the details in between.</p>
+
+        <div style="display:flex; flex-direction:column; gap:30px;">
+          <sc-for list="{{ skillGroups }}" as="group" hint-placeholder-count="5">
+            <div class="skill-row" style="display:grid; grid-template-columns:170px 1fr; gap:24px; align-items:start; padding-bottom:30px; border-bottom:1px solid var(--line2);">
+              <div style="font-family:'Geist Mono',monospace; font-size:12px; color:var(--fg-mute); letter-spacing:.04em; padding-top:4px;">{{ group.label }}</div>
+              <div style="display:flex; flex-wrap:wrap; gap:9px;">
+                <sc-for list="{{ group.items }}" as="skill" hint-placeholder-count="6">
+                  <span class="skill-chip" style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-dim); border:1px solid var(--chip-line); background:var(--chip); padding:7px 13px; border-radius:7px; cursor:default;">{{ skill }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="sec-wrap" style="scroll-margin-top:90px; max-width:1180px; margin:0 auto; padding:110px 40px; border-top:1px solid var(--line2);">
+    <div class="reveal" style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:54px; flex-wrap:wrap; gap:16px;">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:18px;">02 / SELECTED WORK</div>
+        <h2 style="font-size:clamp(30px,4vw,46px); font-weight:700; letter-spacing:-.03em; margin:0;">Things I've shipped</h2>
+      </div>
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-mute);">03 projects</div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:26px;">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.link }}" target="_blank" rel="noopener" class="proj-card reveal" style="display:grid; grid-template-columns:64px 1fr; gap:14px; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:38px 40px; text-decoration:none;">
+          <div class="proj-num" style="font-family:'Geist Mono',monospace; font-size:14px; color:var(--accent); padding-top:6px;">{{ p.num }}</div>
+          <div>
+            <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+              <h3 style="font-size:clamp(24px,3vw,32px); font-weight:700; letter-spacing:-.025em; margin:0;">{{ p.name }}</h3>
+              <span style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-mute);">{{ p.kind }}</span>
+            </div>
+            <p style="font-size:17px; line-height:1.6; color:var(--fg-dim); margin:16px 0 22px; max-width:760px;">{{ p.summary }}</p>
+            <ul style="margin:0 0 26px; padding:0; list-style:none; display:flex; flex-direction:column; gap:11px;">
+              <sc-for list="{{ p.highlights }}" as="h" hint-placeholder-count="2">
+                <li style="display:grid; grid-template-columns:18px 1fr; gap:10px; font-size:15.5px; line-height:1.55; color:var(--fg-dim);"><span style="color:var(--accent); font-family:'Geist Mono',monospace;">›</span><span>{{ h }}</span></li>
+              </sc-for>
+            </ul>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <sc-for list="{{ p.stack }}" as="t" hint-placeholder-count="5">
+                <span style="font-family:'Geist Mono',monospace; font-size:12px; color:var(--accent); background:var(--accent-soft); padding:5px 11px; border-radius:6px;">{{ t }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="sec-wrap" style="scroll-margin-top:90px; max-width:1180px; margin:0 auto; padding:110px 40px; border-top:1px solid var(--line2);">
+    <div class="reveal two-col" style="display:grid; grid-template-columns:0.9fr 1.4fr; gap:72px;">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:18px;">03 / EXPERIENCE</div>
+        <h2 style="font-size:clamp(30px,4vw,46px); font-weight:700; letter-spacing:-.03em; margin:0;">Where I've worked</h2>
+      </div>
+      <div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:8px;">
+          <h3 style="font-size:24px; font-weight:700; margin:0;">Full-Stack Developer · <span style="color:var(--accent);">Bosc Tech Labs</span></h3>
+          <span style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-mute);">SEP 2022 — JUN 2026</span>
+        </div>
+        <p style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-mute); margin:0 0 28px;">Full-time · Product engineering across client platforms</p>
+        <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:16px;">
+          <sc-for list="{{ experience }}" as="e" hint-placeholder-count="4">
+            <li style="display:grid; grid-template-columns:18px 1fr; gap:12px; font-size:16.5px; line-height:1.6; color:var(--fg-dim);"><span style="color:var(--accent); font-family:'Geist Mono',monospace; padding-top:1px;">›</span><span>{{ e }}</span></li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="sec-wrap" style="scroll-margin-top:90px; max-width:1180px; margin:0 auto; padding:110px 40px; border-top:1px solid var(--line2);">
+    <div class="reveal two-col" style="display:grid; grid-template-columns:0.9fr 1.4fr; gap:72px;">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:18px;">04 / EDUCATION</div>
+        <h2 style="font-size:clamp(30px,4vw,46px); font-weight:700; letter-spacing:-.03em; margin:0;">How I got here</h2>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ education }}" as="ed" hint-placeholder-count="2">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; padding:26px 0; border-bottom:1px solid var(--line2);">
+            <div>
+              <div style="font-size:21px; font-weight:600;">{{ ed.title }}</div>
+              <div style="font-size:16px; color:var(--fg-dim); margin-top:5px;">{{ ed.place }}</div>
+            </div>
+            <span style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--fg-mute);">{{ ed.years }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer id="contact" style="scroll-margin-top:90px; border-top:1px solid var(--line2); position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:30px 30px; -webkit-mask-image:radial-gradient(ellipse 70% 90% at 50% 100%, #000, transparent 75%); mask-image:radial-gradient(ellipse 70% 90% at 50% 100%, #000, transparent 75%);"></div>
+    <div class="reveal foot-pad" style="position:relative; z-index:2; max-width:1180px; margin:0 auto; padding:120px 40px 50px;">
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:22px;">05 / CONTACT</div>
+      <h2 style="font-size:clamp(38px,7vw,84px); font-weight:800; letter-spacing:-.04em; line-height:.98; margin:0 0 14px;">Let's build<br>something.</h2>
+      <a href="mailto:christopharantony@gmail.com" class="lnk-slide" style="display:inline-block; font-size:clamp(20px,3vw,30px); color:var(--accent); font-weight:500; margin-top:18px;">christopharantony@gmail.com</a>
+
+      <div style="display:flex; flex-wrap:wrap; gap:40px; margin-top:64px; padding-top:34px; border-top:1px solid var(--line); font-family:'Geist Mono',monospace; font-size:14px;">
+        <div>
+          <div style="color:var(--fg-mute); font-size:11px; letter-spacing:.08em; margin-bottom:8px;">PHONE</div>
+          <a href="tel:+917012049963" class="lnk-slide" style="color:var(--fg-dim);">+91 70120 49963</a>
+        </div>
+        <div>
+          <div style="color:var(--fg-mute); font-size:11px; letter-spacing:.08em; margin-bottom:8px;">GITHUB</div>
+          <a href="https://github.com/christopharantony" target="_blank" rel="noopener" class="lnk-slide" style="color:var(--fg-dim);">github.com/christopharantony</a>
+        </div>
+        <div>
+          <div style="color:var(--fg-mute); font-size:11px; letter-spacing:.08em; margin-bottom:8px;">LINKEDIN</div>
+          <a href="https://linkedin.com/in/christophar-antony" target="_blank" rel="noopener" class="lnk-slide" style="color:var(--fg-dim);">linkedin.com/in/christophar-antony</a>
+        </div>
+        <div>
+          <div style="color:var(--fg-mute); font-size:11px; letter-spacing:.08em; margin-bottom:8px;">RÉSUMÉ</div>
+          <button onclick="{{ downloadResume }}" class="lnk-slide" style="color:var(--fg-dim); background:none; border:none; padding:0; font-family:inherit; font-size:14px; cursor:pointer;">Download ↓</button>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:64px; font-family:'Geist Mono',monospace; font-size:12px; color:var(--fg-mute);">
+        <span>© 2026 Christophar Antony</span>
+        <span>Built with care · Kochi, Kerala</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    // Theme is handled via the DOM (data-theme attribute), NOT React state,
+    // so the component never re-renders and the imperatively-added reveal
+    // classes are never stripped.
+    try {
+      const saved = localStorage.getItem('ca-theme');
+      if (saved === 'light' || saved === 'dark') {
+        const root = document.getElementById('cantony-root');
+        if (root) root.setAttribute('data-theme', saved);
+        const btn = document.getElementById('theme-btn');
+        if (btn) btn.textContent = saved === 'light' ? '☀' : '☾';
+      }
+    } catch (e) {}
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('#cantony-root .reveal');
+    // Failsafe: reveal everything after a short delay even if the observer misses.
+    setTimeout(() => { reveals.forEach((el) => el.classList.add('in')); }, 1800);
+    if ('IntersectionObserver' in window) {
+      const ro = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) { en.target.classList.add('in'); ro.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach((el) => ro.observe(el));
+
+      // Scroll spy
+      const ids = ['about','work','experience','education','contact'];
+      const links = {};
+      document.querySelectorAll('#cantony-root .navlink').forEach((l) => { links[l.getAttribute('data-nav')] = l; });
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            Object.values(links).forEach((l) => l.classList.remove('active'));
+            const id = en.target.getAttribute('id');
+            if (links[id]) links[id].classList.add('active');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ids.forEach((id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+      this._observers = [ro, spy];
+    } else {
+      reveals.forEach((el) => el.classList.add('in'));
+    }
+  }
+
+  componentWillUnmount() {
+    (this._observers || []).forEach((o) => o.disconnect());
+  }
+
+  toggleTheme = () => {
+    const root = document.getElementById('cantony-root');
+    if (!root) return;
+    const next = (root.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    const btn = document.getElementById('theme-btn');
+    if (btn) btn.textContent = next === 'light' ? '☀' : '☾';
+    try { localStorage.setItem('ca-theme', next); } catch (e) {}
+  };
+
+  downloadResume = () => {
+    const a = document.createElement('a');
+    a.href = 'Christophar Antony.pdf';
+    a.download = 'Christophar-Antony-Resume.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+
+
+  skillGroups() {
+    return [
+      { label: 'Frontend', items: ['React','Next.js','TypeScript','Redux Toolkit','Zustand','TanStack Query','Tailwind','Material UI','Vite'] },
+      { label: 'Backend', items: ['Node.js','Express','tRPC','REST','Zod','JWT / RBAC'] },
+      { label: 'Databases & ORMs', items: ['MySQL','PostgreSQL','MongoDB','Firebase','Drizzle','Prisma','Sequelize','TypeORM'] },
+      { label: 'Cloud & DevOps', items: ['AWS S3','AWS EC2','Git / GitHub'] },
+      { label: 'Integrations', items: ['Stripe + Connect','Firebase Auth','Twilio','SendGrid','Onfido KYC','Web3 / ABIs'] },
+    ];
+  }
+
+  projects() {
+    return [
+      {
+        num: '01', name: 'PollenPay', kind: 'Buy-Now-Pay-Later · Fintech', link: '#contact',
+        summary: 'A Buy-Now-Pay-Later platform spanning admin, consumer and merchant surfaces in a single pnpm monorepo.',
+        highlights: [
+          '28+ tRPC routers across Admin / Consumer / Merchant apps in a typed pnpm monorepo.',
+          'Stripe idempotent payments, Onfido KYC, and Twilio / SendGrid authentication flows.',
+        ],
+        stack: ['Next.js','TypeScript','tRPC','Drizzle','Stripe'],
+      },
+      {
+        num: '02', name: 'Clockies (Logwork)', kind: 'Multi-tenant HR & PM SaaS', link: '#contact',
+        summary: 'A multi-tenant HR and project-management SaaS with strict per-tenant data isolation.',
+        highlights: [
+          'REST APIs across 32+ route modules and 42 Sequelize models with multi-tenant isolation + JWT/RBAC.',
+          'Automated leave management and scheduled cron email reports.',
+        ],
+        stack: ['React','Node.js','Express','Sequelize','MySQL'],
+      },
+      {
+        num: '03', name: 'BSchool', kind: 'Multi-tenant EdTech & Recruitment', link: '#contact',
+        summary: 'A multi-tenant EdTech and recruitment platform with two distinct React portals.',
+        highlights: [
+          'RBAC across 6+ roles enforced through multi-tenant middleware.',
+          'Two React portals with Chart.js dashboards, advanced data tables, multi-step forms and drag-and-drop.',
+        ],
+        stack: ['React','Node.js','TypeScript','Chart.js'],
+      },
+    ];
+  }
+
+  experience() {
+    return [
+      'Built and shipped production features end-to-end across fintech, HR SaaS and EdTech client platforms — owning DB schema, APIs and UI.',
+      'Designed typed, multi-tenant backends with tRPC and REST, enforcing JWT/RBAC isolation across dozens of route modules and data models.',
+      'Integrated payments, KYC and messaging (Stripe + Connect, Onfido, Twilio, SendGrid) with idempotent, reliable flows.',
+      'Delivered data-dense React frontends — dashboards, advanced tables, multi-step forms and drag-and-drop — with modern state tooling.',
+    ];
+  }
+
+  education() {
+    return [
+      { title: 'Full-Stack Development Program', place: 'Brototype, Kochi', years: '2022' },
+      { title: 'ITI', place: 'Government ITI, Kalamassery', years: '2019 — 2021' },
+    ];
+  }
+
+  renderVals() {
+    return {
+      toggleTheme: this.toggleTheme,
+      downloadResume: this.downloadResume,
+      skillGroups: this.skillGroups(),
+      projects: this.projects(),
+      experience: this.experience(),
+      education: this.education(),
+    };
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>
